@@ -1,0 +1,683 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Stefanus Natalino | Portfolio Siswa SMK PPLG</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#F0F9FF',
+              100: '#E0F2FE',
+              200: '#BAE6FD',
+              300: '#7DD3FC',
+              400: '#38BDF8',
+              500: '#0EA5E9',
+              600: '#0284C7',
+              700: '#0369A1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom Clean Light Glassmorphism & Soft Ambient Glow */
+    .clean-glass-card {
+      background: #FFFFFF;
+      border: 1px solid #BAE6FD;
+      box-shadow: 0 10px 25px -5px rgba(224, 242, 254, 0.7), 0 4px 6px -2px rgba(186, 230, 253, 0.4);
+    }
+    
+    .clean-card-hover:hover {
+      border-color: #38BDF8;
+      box-shadow: 0 20px 30px -10px rgba(14, 165, 233, 0.22);
+    }
+
+    /* Ambient Background Gradients for Ice Blue Aesthetics */
+    .bg-ice-gradient {
+      background-color: #F0F9FF;
+      background-image: 
+        radial-gradient(circle at 12% 15%, #E0F2FE 0%, transparent 45%),
+        radial-gradient(circle at 88% 85%, #E0F2FE 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, #F8FAFC 0%, transparent 70%);
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F0F9FF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #BAE6FD;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38BDF8;
+    }
+  </style>
+</head>
+<body class="bg-ice-gradient text-slate-600 font-sans antialiased min-h-screen selection:bg-sky-500 selection:text-white">
+<!-- Background decorative subtle dot grid -->
+<div class="fixed inset-0 pointer-events-none z-0 opacity-40" style="background-image: radial-gradient(#93C5FD 1px, transparent 1px); background-size: 28px 28px;"></div>
+<!-- STICKY HEADER / NAVIGATION BAR -->
+<header class="sticky top-0 z-50 w-full bg-white/85 backdrop-blur-md border-b border-sky-100 shadow-sm transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-400 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-sky-200 group-hover:scale-105 transition-transform duration-300">
+<i class="fa-solid fa-code text-sm"></i>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors duration-300">
+          Stefanus Natalino<span class="text-sky-500">.</span>
+</span>
+</a>
+<!-- Desktop Navigation Menu Links -->
+<nav class="hidden md:flex items-center gap-1 sm:gap-2">
+<a class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all duration-200 flex items-center gap-2" href="#about">
+<i class="fa-regular fa-user text-xs text-sky-500"></i> About
+</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all duration-200 flex items-center gap-2" href="#skills">
+<i class="fa-solid fa-layer-group text-xs text-sky-500"></i> Skills
+</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all duration-200 flex items-center gap-2" href="#projects">
+<i class="fa-solid fa-laptop-code text-xs text-sky-500"></i> Projects
+</a>
+<a class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-all duration-200 flex items-center gap-2" href="#contact">
+<i class="fa-regular fa-envelope text-xs text-sky-500"></i> Contact
+</a>
+</nav>
+<!-- CTA Button & Mobile Menu Toggle -->
+<div class="flex items-center gap-3">
+<a class="relative group inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium border border-sky-400 text-sky-600 hover:bg-sky-500 hover:text-white transition-all duration-300 shadow-sm" href="#contact">
+<i class="fa-solid fa-file-arrow-down text-sm group-hover:translate-y-0.5 transition-transform duration-300"></i>
+<span class="">Download CV</span>
+</a>
+<!-- Mobile hamburger menu button -->
+<button aria-label="Toggle Navigation" class="md:hidden w-10 h-10 rounded-xl bg-sky-50 text-slate-700 border border-sky-200 flex items-center justify-center hover:text-sky-600 hover:bg-sky-100 transition-colors" id="mobileMenuBtn">
+<i class="fa-solid fa-bars text-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown Nav -->
+<div class="hidden md:hidden border-t border-sky-100 bg-white/95 backdrop-blur-xl px-4 py-4 space-y-1 shadow-lg" id="mobileMenu">
+<a class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 transition-colors" href="#about">
+<i class="fa-regular fa-user w-5 text-sky-500 mr-2"></i> About
+</a>
+<a class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 transition-colors" href="#skills">
+<i class="fa-solid fa-layer-group w-5 text-sky-500 mr-2"></i> Skills
+</a>
+<a class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 transition-colors" href="#projects">
+<i class="fa-solid fa-laptop-code w-5 text-sky-500 mr-2"></i> Projects
+</a>
+<a class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 transition-colors" href="#contact">
+<i class="fa-regular fa-envelope w-5 text-sky-500 mr-2"></i> Contact
+</a>
+</div>
+</header>
+<!-- MAIN CONTAINER: 2-COLUMN RESPONSIVE LAYOUT -->
+<main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+<!-- ========================================================================= -->
+<!-- SIDEBAR / PROFIL UTAMA (Desktop: 35% ~ 4-5 cols | Mobile: Stack Top)       -->
+<!-- ========================================================================= -->
+<aside class="lg:col-span-4 lg:sticky lg:top-28">
+<div class="bg-white border border-sky-200 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-md shadow-sky-100/50 transition-all duration-300">
+<!-- Avatar Frame 160x160 with Gradient Border -->
+<div class="relative group">
+<div class="w-40 h-40 rounded-full mx-auto p-1 bg-gradient-to-tr from-sky-400 to-cyan-400 shadow-lg shadow-sky-200/50">
+<img alt="Stefanus Natalino" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSTylQyI_sKRFNrZNNS-1afJxaaDjcedDDATk0OFul1qSz1wBA_Y90dZt6C0kjFP0IIIQuhhqkf5seWXrruD95fncpgeNZb44pguJ-2-LYYuYrFFKF8CMLfGD_QAh9W6cmLzN6GIdIw9cYm63bTR26N4QRR-heaNolC9YvE1vfNY6tskOIFn9iLEijX4qgNtCZrgFRTDb2cSaPGbI_094pXVCx7GgqdV3v8T36hpYn_06BmvPDF-Fb">
+</div>
+</div>
+<!-- Status Badge Pill -->
+<div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-800 border border-sky-200 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="">Open for Internship / Freelance</span>
+</div>
+<!-- Data Diri -->
+<h1 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+  Stefanus Natalino
+</h1>
+<p class="mt-1 text-sm font-medium text-sky-600">
+  Siswa SMK RPL | Frontend &amp; UI Developer
+</p><a class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-slate-700 bg-sky-50 border border-sky-200 hover:text-sky-600 hover:border-sky-400 hover:bg-sky-100 transition-all" href="https://github.com/natalinonono" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github text-xs text-slate-800"></i> @natalinonono</a>
+<p class="mt-4 text-sm text-slate-600 leading-relaxed text-center font-normal">
+  Siswa SMK yang antusias dalam rekayasa perangkat lunak modern. Berdedikasi menghadirkan antarmuka web interaktif yang rapi, cepat, responsif, serta berorientasi pada kepuasan pengguna.
+</p>
+<!-- Divider -->
+<div class="w-full h-px bg-sky-100 my-6"></div>
+<!-- Detail Kontak & Sekolah -->
+<div class="w-full space-y-3.5 text-left text-xs sm:text-sm">
+<div class="flex items-center gap-3 text-slate-600 group">
+<div class="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 group-hover:border-sky-400 transition-colors">
+<i class="fa-solid fa-envelope text-xs"></i>
+</div>
+<span class="truncate">stefanusnatalino.dev@gmail.com</span>
+</div>
+<div class="flex items-center gap-3 text-slate-600 group">
+<div class="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 group-hover:border-sky-400 transition-colors">
+<i class="fa-solid fa-location-dot text-xs"></i>
+</div>
+<span class="">Surakarta, Jawa Tengah, Indonesia</span>
+</div>
+<div class="flex items-center gap-3 text-slate-600 group">
+<div class="w-8 h-8 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 group-hover:border-sky-400 transition-colors">
+<i class="fa-solid fa-graduation-cap text-xs"></i>
+</div>
+<span class="font-medium text-slate-900">SMK Negeri 2 Surakarta (PPLG)</span>
+</div>
+</div>
+<!-- Social Media Icons Bar -->
+<div class="mt-6 w-full">
+<p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3">Terhubung Bersama Saya</p>
+<div class="flex items-center justify-center gap-3">
+<a aria-label="GitHub" class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 hover:bg-sky-500 hover:text-white transition-all duration-300 flex items-center justify-center text-base shadow-sm hover:scale-110" href="https://github.com/natalinonono" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
+<a aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 hover:bg-sky-500 hover:text-white transition-all duration-300 flex items-center justify-center text-base shadow-sm hover:scale-110" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 hover:bg-sky-500 hover:text-white transition-all duration-300 flex items-center justify-center text-base shadow-sm hover:scale-110" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 hover:bg-sky-500 hover:text-white transition-all duration-300 flex items-center justify-center text-base shadow-sm hover:scale-110" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+</div>
+</div>
+<!-- Quick Action Button in Sidebar -->
+<div class="mt-6 w-full pt-4 border-t border-sky-100">
+<a class="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-center block bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white shadow-md shadow-sky-200 transition-all flex items-center justify-center gap-2" href="#contact">
+<i class="fa-regular fa-paper-plane text-xs"></i>
+<span class="">Hubungi Langsung</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- SECTION KONTEN UTAMA (Desktop: 65% ~ 7-8 cols | Mobile: Full Width)        -->
+<!-- ========================================================================= -->
+<div class="lg:col-span-8 space-y-8">
+<!-- ======================================================================= -->
+<!-- 1. SECTION EDUCATION & ABOUT ME                                         -->
+<!-- ======================================================================= -->
+<section class="scroll-mt-24" id="about">
+<div class="bg-white border border-sky-200 rounded-2xl p-6 md:p-8 shadow-md shadow-sky-100/50 transition-all duration-300">
+<!-- Section Header -->
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base">
+<i class="fa-regular fa-id-card"></i>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">Tentang Saya &amp; Pendidikan</h2>
+<p class="text-xs sm:text-sm text-slate-400">Latar belakang akademis dan fokus pengembangan diri</p>
+</div>
+</div>
+<!-- Ringkasan Minat & Keahlian -->
+<div class="bg-sky-50/60 rounded-xl p-5 border border-sky-100 text-sm text-slate-600 leading-relaxed mb-8">
+<p class="">
+Saya memiliki ketertarikan mendalam pada rekayasa web dan arsitektur frontend sejak awal menempuh studi kejuruan. Fokus utama saya adalah membangun aplikasi web modern yang fungsional, berkinerja tinggi, dan estetik secara visual. Terbiasa menulis kode yang terstruktur, adaptif terhadap perkembangan teknologi terbaru, serta antusias dalam memecahkan tantangan antarmuka pengguna yang kompleks.
+</p>
+</div>
+<!-- Timeline Pendidikan -->
+<h3 class="text-xs uppercase tracking-wider text-sky-600 font-semibold mb-5 flex items-center gap-2">
+<i class="fa-solid fa-timeline text-xs"></i>
+Riwayat Pendidikan &amp; Pelatihan
+</h3>
+<div class="border-l-2 border-sky-200 pl-6 ml-2 relative space-y-8">
+<!-- Item 1: SMK PPLG -->
+<div class="relative group">
+<!-- Dot marker -->
+<div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white border-2 border-sky-500 group-hover:scale-125 group-hover:bg-sky-500 transition-all duration-300"></div>
+<div class="bg-white p-5 rounded-xl border border-sky-100 shadow-sm hover:border-sky-300 transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+<h4 class="text-base sm:text-lg font-bold text-slate-900">SMK Negeri 2 Surakarta</h4>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-sky-100 text-sky-700 border border-sky-200">
+2025 - Sekarang
+</span>
+</div>
+<p class="text-xs sm:text-sm font-semibold text-sky-600 mb-3">
+Pengembangan Perangkat Lunak dan Gim (PPLG)
+</p>
+<ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+<li class="flex items-start gap-2.5">
+<i class="fa-solid fa-circle-check text-xs text-sky-500 mt-1"></i>
+<span class=""><strong>Pemrograman Dasar &amp; Struktur Logika:</strong> Pemahaman algoritma komputasi, Object-Oriented Programming (OOP) dasar, dan pemikiran komputasional analitis.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<i class="fa-solid fa-circle-check text-xs text-sky-500 mt-1"></i>
+<span class=""><strong>Pengembangan Web Modern:</strong> Penguasaan HTML5 semantik, arsitektur tata letak Tailwind CSS responsif, JavaScript ES6+, dan eksplorasi komponen React.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<i class="fa-solid fa-circle-check text-xs text-sky-500 mt-1"></i>
+<span class=""><strong>Database &amp; Kolaborasi Git:</strong> Desain relasional MySQL, alur kerja version control Git/GitHub, dan penerjemahan desain visual Figma menjadi kode web siap pakai.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Item 2: Pelatihan Mandiri -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white border-2 border-cyan-500 group-hover:scale-125 group-hover:bg-cyan-500 transition-all duration-300"></div>
+<div class="bg-white p-5 rounded-xl border border-sky-100 shadow-sm hover:border-sky-300 transition-colors">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+<h4 class="text-base sm:text-lg font-bold text-slate-900">Pelatihan Mandiri &amp; Eksplorasi Frontend</h4>
+<span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-sky-100 text-sky-700 border border-sky-200">
+2025
+</span>
+</div>
+<p class="text-xs sm:text-sm font-semibold text-cyan-600 mb-2">
+Pembelajaran Mandiri &amp; Komunitas Developer
+</p>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+Belajar mandiri melalui platform coding interaktif dan komunitas pengembang untuk memperdalam pemahaman modern frontend architecture, reusable component design, dan integrasi API asinkron.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================================================= -->
+<!-- 2. SECTION TECHNICAL SKILLS                                             -->
+<!-- ======================================================================= -->
+<section class="scroll-mt-24" id="skills">
+<div class="bg-white border border-sky-200 rounded-2xl p-6 md:p-8 shadow-md shadow-sky-100/50 transition-all duration-300">
+<!-- Section Header -->
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base">
+<i class="fa-solid fa-code"></i>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">Technical Skills</h2>
+<p class="text-xs sm:text-sm text-slate-400">Kumpulan keahlian teknis dan kemampuan interpersonal</p>
+</div>
+</div>
+<!-- Hard Skills Grid (3 Kolom) -->
+<div class="mb-8">
+<h3 class="text-xs uppercase tracking-wider text-sky-600 font-semibold mb-4 flex items-center gap-2">
+<i class="fa-solid fa-terminal text-xs"></i> Hard Skills &amp; Stack Teknologi
+</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Skill 1: HTML5 & CSS3 -->
+<div class="bg-sky-50/60 border border-sky-100 rounded-xl p-4 hover:border-sky-300 hover:shadow-sm transition-all group">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 text-lg group-hover:scale-110 transition-transform">
+<i class="fa-brands fa-html5"></i>
+</div>
+<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-100 text-sky-700">
+Advanced
+</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">HTML5 &amp; CSS3</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Semantic layout, modern flexbox, CSS Grid, animasi UI.</p>
+</div>
+<!-- Skill 2: JavaScript -->
+<div class="bg-sky-50/60 border border-sky-100 rounded-xl p-4 hover:border-sky-300 hover:shadow-sm transition-all group">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center text-yellow-600 text-lg group-hover:scale-110 transition-transform">
+<i class="fa-brands fa-js"></i>
+</div>
+<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-100 text-sky-700">
+Intermediate
+</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">JavaScript (ES6+)</h4>
+<p class="text-xs text-slate-500 leading-relaxed">DOM Manipulation, Async/Await, Fetch API, Modular code.</p>
+</div>
+<!-- Skill 3: Tailwind CSS -->
+<div class="bg-sky-50/60 border border-sky-100 rounded-xl p-4 hover:border-sky-300 hover:shadow-sm transition-all group">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center text-sky-500 text-lg group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-wind"></i>
+</div>
+<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-100 text-sky-700">
+Advanced
+</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">Tailwind CSS</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Utility classes, responsive design, custom theme tokens.</p>
+</div>
+<!-- Skill 4: React.js -->
+<div class="bg-sky-50/60 border border-sky-100 rounded-xl p-4 hover:border-sky-300 hover:shadow-sm transition-all group">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600 text-lg group-hover:scale-110 transition-transform">
+<i class="fa-brands fa-react"></i>
+</div>
+<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-100 text-sky-700">
+Intermediate
+</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">React.js</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Functional Components, Hooks, State, SPA architecture.</p>
+</div>
+<!-- Skill 5: MySQL -->
+<div class="bg-sky-50/60 border border-sky-100 rounded-xl p-4 hover:border-sky-300 hover:shadow-sm transition-all group">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 text-lg group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-database"></i>
+</div>
+<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-100 text-sky-700">
+Intermediate
+</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">MySQL Database</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Relational Schema, CRUD, Query Optimization, Foreign Keys.</p>
+</div>
+<!-- Skill 6: Git & GitHub -->
+<div class="bg-sky-50/60 border border-sky-100 rounded-xl p-4 hover:border-sky-300 hover:shadow-sm transition-all group">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center text-rose-500 text-lg group-hover:scale-110 transition-transform">
+<i class="fa-brands fa-git-alt"></i>
+</div>
+<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-sky-100 text-sky-700">
+Advanced
+</span>
+</div>
+<h4 class="text-sm font-bold text-slate-900 mb-1">Git &amp; GitHub</h4>
+<p class="text-xs text-slate-500 leading-relaxed">Version Control, Branching, Pull Requests, Commit convention.</p>
+</div>
+</div>
+</div>
+<!-- Soft Skills Tags / Pills -->
+<div>
+<h3 class="text-xs uppercase tracking-wider text-sky-600 font-semibold mb-3 flex items-center gap-2">
+<i class="fa-solid fa-users-gear text-xs"></i> Soft Skills &amp; Nilai Kerja
+</h3>
+<div class="flex flex-wrap gap-2.5">
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-sm font-medium bg-sky-50 border border-sky-200 text-sky-800 hover:bg-sky-100 transition-all cursor-default">
+<i class="fa-solid fa-lightbulb text-sky-500 text-xs"></i>
+Problem Solving
+</span>
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-sm font-medium bg-sky-50 border border-sky-200 text-sky-800 hover:bg-sky-100 transition-all cursor-default">
+<i class="fa-solid fa-people-group text-sky-500 text-xs"></i>
+Kerja Tim (Teamwork)
+</span>
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-sm font-medium bg-sky-50 border border-sky-200 text-sky-800 hover:bg-sky-100 transition-all cursor-default">
+<i class="fa-solid fa-clock-rotate-left text-sky-500 text-xs"></i>
+Manajemen Waktu
+</span>
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-sm font-medium bg-sky-50 border border-sky-200 text-sky-800 hover:bg-sky-100 transition-all cursor-default">
+<i class="fa-solid fa-magnifying-glass text-sky-500 text-xs"></i>
+Detail-Oriented &amp; Kerapian UI
+</span>
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-sm font-medium bg-sky-50 border border-sky-200 text-sky-800 hover:bg-sky-100 transition-all cursor-default">
+<i class="fa-solid fa-book-open-reader text-sky-500 text-xs"></i>
+Kemauan Belajar Cepat (Fast Learner)
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================================================= -->
+<!-- 3. SECTION FEATURED PROJECTS                                            -->
+<!-- ======================================================================= -->
+<section class="scroll-mt-24" id="projects">
+<div class="bg-white border border-sky-200 rounded-2xl p-6 md:p-8 shadow-md shadow-sky-100/50 transition-all duration-300">
+<!-- Section Header -->
+<div class="flex items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">Featured Projects</h2>
+<p class="text-xs sm:text-sm text-slate-400">Koleksi proyek pilihan yang telah saya kembangkan</p>
+</div>
+</div>
+<span class="hidden sm:inline-block text-xs font-mono text-sky-700 bg-sky-100 border border-sky-200 px-3 py-1 rounded-full font-medium">
+4 Proyek Pilihan
+</span>
+</div>
+<!-- Projects 2-Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- Project 1: SIPERU Purbowardayan -->
+<div class="group bg-white rounded-2xl border border-sky-100 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-200/60 flex flex-col justify-between">
+<div>
+<!-- Frame Gambar Mockup 16:9 -->
+<div class="w-full h-44 rounded-xl overflow-hidden relative bg-sky-50 border border-sky-100 mb-4">
+<img alt="SIPERU Purbowardayan Mockup" class="w-full h-44 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzAG2IOMpaN2B4XcBLs8JHPzW4Gt-KBdcLLQnp2NlHuHkBnuxmZkt-sC31nGyxkbzGT37vVIRwpp7UBaf4Z6vlgfTULat4Es7GQlgjdiiiaAV6StfwXS_htZSUNnJLEkxFpuGzMf1idn6w14NC9rwQGOuWZx6OSbR4HyIg7CIO4Qhn_S48F1OxFMg6MleM63yP9NwMeMRmUNVH5QTYL632Kdc-xhi3blIkIk3v-8ucUpYiIRQ8Fv9D">
+</div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap gap-1.5 mb-2.5">
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#JavaScript</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Express</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Vercel</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#MySQL</span>
+</div>
+<!-- Title & Description -->
+<h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors mb-2">
+SIPERU Purbowardayan
+</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+Sistem Informasi Peminjaman Ruang Paroki SPMR Purbowardayan. Aplikasi manajemen peminjaman dan penjadwalan ruang gereja paroki terintegrasi dengan kalender peminjaman real-time.
+</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-3 border-t border-sky-100">
+<a class="flex-1 py-2 px-3 text-center text-xs font-semibold rounded-lg bg-sky-500 hover:bg-sky-600 text-white transition-colors duration-200 shadow-sm flex items-center justify-center gap-1.5" href="https://siperu-purbowardayan.vercel.app" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Live Demo
+</a>
+<a class="py-2 px-3 text-center text-xs font-medium rounded-lg border border-sky-300 hover:bg-sky-50 text-sky-700 transition-colors duration-200 flex items-center justify-center gap-1.5" href="https://github.com/natalinonono/siperu-purbowardayan" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i> Source Code
+</a>
+</div>
+</div>
+<!-- Project 2: Lentera Kehidupan -->
+<div class="group bg-white rounded-2xl border border-sky-100 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-200/60 flex flex-col justify-between">
+<div>
+<!-- Frame Gambar Mockup 16:9 -->
+<div class="w-full h-44 rounded-xl overflow-hidden relative bg-sky-50 border border-sky-100 mb-4">
+<img alt="Lentera Kehidupan Mockup" class="w-full h-44 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmkoOEfR8QpfjJrUcrd5K3ZptaCNJQsd1kyER_-V7CCcmemKdS_o_-qcbO0Vc8Hm1YvF56d2Wa29dL2tyg0OXRbAJ_IKHg6p6eonOdgeqS9-j5xJKuHUBELvaVGnznoPriEXRxPH3xxX9KSftbTAcLffDCxNYhntQaCsYtwKsQyojasalojNEAyoBkJfx8LrO_yzN-v6FbVDNpl98iGiCBUW5qHCs-_eRnv3jr2EUSDxeMTSAgAwB_">
+</div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap gap-1.5 mb-2.5"><span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Java</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Android</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#MobileApp</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Gradle</span></div>
+<!-- Title & Description -->
+<h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors mb-2">
+Lentera Kehidupan
+</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">Aplikasi Android pelacak progres membaca Alkitab harian dengan penentuan target bacaan, tracking streak harian, pemilihan kanon (Katolik &amp; Protestan), riwayat bacaan, serta sistem badge gelar rohani.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-3 border-t border-sky-100">
+<a class="flex-1 py-2 px-3 text-center text-xs font-semibold rounded-lg bg-sky-500 hover:bg-sky-600 text-white transition-colors duration-200 shadow-sm flex items-center justify-center gap-1.5" href="https://github.com/natalinonono/Lentera-Kehidupan" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Detail Proyek
+</a>
+<a class="py-2 px-3 text-center text-xs font-medium rounded-lg border border-sky-300 hover:bg-sky-50 text-sky-700 transition-colors duration-200 flex items-center justify-center gap-1.5" href="https://github.com/natalinonono/Lentera-Kehidupan" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i> Source Code
+</a>
+</div>
+</div>
+<!-- Project 3: Project-1 (Java Core & Algorithms) -->
+<div class="group bg-white rounded-2xl border border-sky-100 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-200/60 flex flex-col justify-between">
+<div>
+<!-- Frame Gambar Mockup 16:9 -->
+<div class="w-full h-44 rounded-xl overflow-hidden relative bg-sky-50 border border-sky-100 mb-4">
+<img alt="Project-1 Mockup" class="w-full h-44 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VMUtRH79ilLYzZwQNHdrjqv1CwhxSq6GboXYLNzJOadhMHiEjPbhS16jBqbCNdKgQLvqUWGRaYwDJQjp7hg_mAZNIVF47K53eCr9MyAnKD3II7oaWT0MQSyFvc3pAb9g1QCl2dBj2TckT6lRe-5NCAVGiop7SLKrJ3nmqd3lurWT7OdHghM7yEBFJ2MgnOY5T-BpYh9Dy3V4gYxz4p3Xfcix7IdhX3F8JYPHrj_CSqV478ysPr0xAAQg">
+</div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap gap-1.5 mb-2.5">
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Java</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#OOP</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#Algorithms</span>
+</div>
+<!-- Title & Description -->
+<h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors mb-2">
+Project-1 (Java Core &amp; Algorithms)
+</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+Implementasi konsep Object-Oriented Programming (OOP), struktur data dasar, dan modul logika komputasi dalam pengembangan aplikasi perangkat lunak desktop.
+</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-3 border-t border-sky-100">
+<a class="flex-1 py-2 px-3 text-center text-xs font-semibold rounded-lg bg-sky-500 hover:bg-sky-600 text-white transition-colors duration-200 shadow-sm flex items-center justify-center gap-1.5" href="https://github.com/natalinonono/Project-1" target="_blank" rel="noopener noreferrer">
+<i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Lihat Repositori
+</a>
+<a class="py-2 px-3 text-center text-xs font-medium rounded-lg border border-sky-300 hover:bg-sky-50 text-sky-700 transition-colors duration-200 flex items-center justify-center gap-1.5" href="https://github.com/natalinonono/Project-1" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i> Source Code
+</a>
+</div>
+</div>
+<!-- Project 4: EduConnect - Portal Akademik -->
+<div class="group bg-white rounded-2xl border border-sky-100 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-sky-300 hover:shadow-xl hover:shadow-sky-200/60 flex flex-col justify-between">
+<div>
+<!-- Frame Gambar Mockup 16:9 -->
+<div class="w-full h-44 rounded-xl overflow-hidden relative bg-sky-50 border border-sky-100 mb-4">
+<img alt="EduConnect Mockup" class="w-full h-44 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Udrbs8sQqYa0DQvc0UOoII4mEM6xMC_FR155USI008BKgdiIXyKB0itlM2OAjvcndUUTSwqu_r4Fb18o-f4Gf9khgZ4Pfom1ENBP6nSXxAufP0ALKnY2UxrRIJ6DVKrYmzSKHboHgEzsth110BOIBVrziTJobTdeNjvR2jJHKZU3a2R0xdfpnYWzP3QMH4r2slomNt2gKwr_E7hy5FrEwGDUNTAIJwazxmB6chPgCtRF0ZQdquT3NQzUk">
+</div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap gap-1.5 mb-2.5">
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#HTML5</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#TailwindCSS</span>
+<span class="text-xs px-2 py-0.5 rounded font-mono font-medium bg-sky-100 text-sky-700">#JavaScript</span>
+</div>
+<!-- Title & Description -->
+<h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors mb-2">
+EduConnect - Portal Akademik
+</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+Eksplorasi antarmuka dashboard manajemen akademik siswa dan visualisasi data kelas yang responsif dan interaktif.
+</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-3 border-t border-sky-100">
+<a class="flex-1 py-2 px-3 text-center text-xs font-semibold rounded-lg bg-sky-500 hover:bg-sky-600 text-white transition-colors duration-200 shadow-sm flex items-center justify-center gap-1.5" href="https://github.com/natalinonono" target="_blank" rel="noopener noreferrer">
+<i class="fa-brands fa-github text-[10px]"></i> GitHub Profile
+</a>
+<a class="py-2 px-3 text-center text-xs font-medium rounded-lg border border-sky-300 hover:bg-sky-50 text-sky-700 transition-colors duration-200 flex items-center justify-center gap-1.5" href="https://github.com/natalinonono" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github text-sm"></i> Source Code
+</a>
+</div>
+</div></div>
+</div>
+</section>
+<!-- ======================================================================= -->
+<!-- 4. SECTION FORM KONTAK                                                  -->
+<!-- ======================================================================= -->
+<section class="scroll-mt-24" id="contact">
+<div class="bg-white border border-sky-200 rounded-2xl p-6 md:p-8 shadow-md shadow-sky-100/50 relative overflow-hidden">
+<!-- Soft ambient decoration in corner -->
+<div class="absolute -top-16 -right-16 w-44 h-44 bg-sky-100/70 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Section Header -->
+<div class="flex items-center gap-3 mb-6 relative z-10">
+<div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base">
+<i class="fa-regular fa-paper-plane"></i>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 tracking-tight">Mari Terhubung &amp; Berkolaborasi</h2>
+<p class="text-xs sm:text-sm text-slate-400">Ada ide proyek menarik atau tawaran magang? Kirimkan pesan di bawah ini!</p>
+</div>
+</div>
+<!-- Contact Form -->
+<form class="space-y-5 relative z-10" id="contactForm" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah berhasil terkirim.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Full Name -->
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2" for="fullName">
+Nama Lengkap <span class="text-sky-500">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+<i class="fa-regular fa-user text-xs"></i>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition-all" id="fullName" placeholder="contoh: Stefanus Natalino" required="" type="text">
+</div>
+</div>
+<!-- Email Address -->
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2" for="emailAddress">
+Alamat Email <span class="text-sky-500">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+<i class="fa-regular fa-envelope text-xs"></i>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition-all" id="emailAddress" placeholder="nama@perusahaan.com" required="" type="email">
+</div>
+</div>
+</div>
+<!-- Subject -->
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2" for="subject">
+Subjek Pesan <span class="text-sky-500">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+<i class="fa-solid fa-tag text-xs"></i>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition-all" id="subject" placeholder="Peluang Magang / Diskusi Proyek Web / Pertanyaan" required="" type="text">
+</div>
+</div>
+<!-- Message Textarea -->
+<div>
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2" for="messageContent">
+Pesan Anda <span class="text-sky-500">*</span>
+</label>
+<div class="relative">
+<textarea class="w-full p-4 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition-all resize-y" id="messageContent" placeholder="Tuliskan pesan detail atau deskripsi proyek yang ingin didiskusikan..." required="" rows="4"></textarea>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 shadow-md shadow-sky-200 transition-all duration-300 hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] flex items-center justify-center gap-2 cursor-pointer" type="submit">
+<span class="">Kirim Pesan</span>
+<i class="fa-solid fa-paper-plane text-xs"></i>
+</button>
+</form>
+<!-- Availability Note footer -->
+<div class="mt-4 pt-3 border-t border-sky-100 text-center text-xs text-slate-400">
+⚡ Respons cepat &lt; 24 jam • 🔒 Data terlindungi &amp; rahasia
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="mt-16 border-t border-sky-200 bg-white/80 backdrop-blur-md py-8 text-center text-xs text-slate-500">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 font-medium">
+<span class="font-bold text-slate-900">Stefanus Natalino</span>
+<span class="">— Siswa SMK Negeri 2 Surakarta (PPLG)</span>
+</div>
+<div><span class="">© 2025 Stefanus Natalino • </span><a class="text-sky-600 hover:underline font-mono inline-flex items-center gap-1" href="https://github.com/natalinonono" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github text-xs"></i> github.com/natalinonono</a><span class=""> • Dirancang dengan Clean Modern Light Design</span></div>
+</div>
+</footer>
+<!-- Script for Mobile Menu Toggle -->
+<script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+
+
+
+
+</body></html>
